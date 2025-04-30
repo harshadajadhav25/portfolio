@@ -112,6 +112,7 @@ header {
   font-weight: bold;
   color: #00d8ff;
   margin-bottom: 10px;
+  text-align: center;
 }
 
 nav {
