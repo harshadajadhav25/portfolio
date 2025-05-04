@@ -4,6 +4,8 @@
       <div class="logo">Harshada Jadhav</div>
       <nav>
         <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
@@ -12,8 +14,9 @@
 
     <section class="hero" id="hero">
       <div class="hero-text">
+        <img src="/profile.jpg" alt="Harshada" class="hero-img" />
         <h1>Hello, I'm Harshada</h1>
-        <p>Data Engineer | Cloud Developer | Data Enthusiast</p>
+        <p>Big Data Enthusiast | Cloud Developer | Data Engineer</p>
         <a href="#projects" class="btn">View Projects</a>
       </div>
     </section>
@@ -26,6 +29,35 @@
         With experience at Abzooba India Infotech, I developed ETL pipelines, optimized data processing
         for billions of records, and delivered actionable insights for real-world business challenges.
       </p>
+    </section>
+
+    <section class="section" id="education">
+      <h2>Education</h2>
+      <div class="info-card">
+        <p><strong>California State University, Los Angeles</strong><br />Master of Science in Computer Science (2023–2025)</p>
+        <p><strong>Savitribai Phule Pune University, Pune</strong><br />Bachelor of Engineering in Computer Engineering (2017–2021)</p>
+      </div>
+    </section>
+
+    <section class="section" id="experience">
+      <h2>Experience</h2>
+      <div class="info-card">
+        <div class="exp-row">
+          <span class="exp-left"><strong>Abzooba India Infotech Pvt. Ltd.</strong></span>
+          <span class="exp-right">Pune, Maharashtra, India</span>
+        </div>
+        <div class="exp-row">
+          <span class="exp-left">Big Data and Cloud Junior Developer</span>
+          <span class="exp-right">June 2021 – June 2023</span>
+        </div>
+        <ul class="experience-list">
+          <li>Worked on a comprehensive end-to-end ETL pipeline leveraging AWS services, including Glue, RDS, S3, Lambda, Athena, OpenSearch, and EC2 to process 100 GBs of data using Python and PySpark.</li>
+          <li>Improved data analysis capabilities using Microsoft Suite, enabling data-driven decisions from 1–5 billion records.</li>
+          <li>Optimized ETL processes by implementing advanced techniques, debugging, and backtracking within a CI/CD framework, reducing data processing time by 40% and increasing accuracy by 25%.</li>
+          <li>Transformed complex nested data formats (JSON, text, CSV) into insights with PySpark, supporting Agile decision-making.</li>
+          <li>Enhanced performance by 60% through PySpark and efficient querying of RDS using SQL and PostgreSQL.</li>
+        </ul>
+      </div>
     </section>
 
     <section class="section" id="projects">
@@ -50,8 +82,12 @@
 
     <section class="section" id="contact">
       <h2>Contact</h2>
-      <p>Email: <a href="mailto:jadhavharshadas.2599@gmail.com">jadhavharshadas.2599@gmail.com</a></p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/harshada-jadhav/" target="_blank">Visit Profile</a></p>
+      <form action="https://formspree.io/f/xyzwelpn" method="POST" class="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="_replyto" placeholder="Your Email" required />
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
     </section>
 
     <footer>
@@ -85,6 +121,11 @@ const skills = [
 <style scoped>
 @import "@fortawesome/fontawesome-free/css/all.min.css";
 
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
@@ -92,64 +133,62 @@ body {
   color: #e0e0e0;
   scroll-behavior: smooth;
   font-size: 18px;
-  overflow-x: hidden;
 }
 
 header {
-  top: 0;
-  width: 100%;
   background: #000;
-  display: flex;
-  flex-direction: column;
-  align-items: left;
+  text-align: center;
   padding: 20px 0;
-  box-shadow: 0px 2px 10px rgba(255,255,255,0.1);
-  z-index: 999;
 }
 
 .logo {
   font-size: 3rem;
-  font-weight: bold;
   color: #00d8ff;
-  margin-bottom: 10px;
-  text-align: center;
 }
 
 nav {
   display: flex;
-  gap: 20px;
   justify-content: center;
   flex-wrap: wrap;
+  gap: 20px;
 }
+
 nav a {
   color: #e0e0e0;
   text-decoration: none;
   font-weight: 500;
-  font-size: 1.1rem;
 }
 
 .hero {
-  width: 100%;
-  height: 100vh;
-  overflow-x: hidden;
-  background: linear-gradient(to right, #1f1f1f, #121212);
-  color: white;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  height: 100vh;
+  background: linear-gradient(to right, #1f1f1f, #121212);
   text-align: center;
-  padding: 0 20px;
-  box-sizing: border-box;
+  padding: 60px 20px;
 }
 
-.hero-text h1 {
+.hero-img {
+  width: 280px;
+  height: 370px;
+  object-fit: cover;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  border-radius: 10px;
+}
+
+.hero h1 {
   font-size: 3.5rem;
-  margin-bottom: 20px;
+  margin: 0 0 10px;
+  color: white;
 }
 
-.hero-text p {
+.hero p {
   font-size: 1.5rem;
   margin-bottom: 30px;
+  color: white;
 }
 
 .btn {
@@ -157,60 +196,76 @@ nav a {
   color: black;
   padding: 14px 30px;
   border-radius: 30px;
-  text-decoration: none;
   font-weight: bold;
-  font-size: 1rem;
+  text-decoration: none;
   transition: background 0.3s;
 }
+
 .btn:hover {
   background: #00aacc;
 }
 
 .section {
-  width: 100%;
+  padding: 100px 5%;
+  background: #f4f4f4;
   text-align: center;
-}
-
-#about,
-#skills,
-#contact {
-  background-color: #f4f4f4;
   color: #111;
 }
 
 .section h2 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   margin-bottom: 40px;
-  color: black;
 }
 
 .section p {
-  font-size: 1.3rem;
-  line-height: 1.8;
-  color: #333;
+  font-size: 1.5rem;
   max-width: 1000px;
   margin: auto;
+  line-height: 1.8;
 }
 
-/* Projects section */
-.card h3 {
-  color: #ffffff;
-  font-weight: bold;
-  margin-bottom: 15px;
+.info-card {
+  background: #1e1e1e;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0px 5px 20px rgba(0,0,0,0.7);
+  transition: transform 0.3s;
+  font-size: 1.2rem;
+  max-width: 1000px;
+  margin: 0 auto 30px;
+  color: #ddd;
 }
 
-.card p {
-  color: #cccccc;
-  font-size: 1rem;
-  line-height: 1.6;
+.info-card:hover {
+  transform: translateY(-8px);
 }
 
-/* Skills section */
-.skill p {
-  color: #dddddd;
+.experience-list {
+  margin-top: 20px;
+  padding-left: 20px;
   font-size: 1.1rem;
-  margin-top: 10px;
-  text-align: center;
+  line-height: 1.7;
+  text-align: left;
+}
+
+.experience-list li {
+  margin-bottom: 12px;
+}
+
+.exp-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+
+.exp-left {
+  font-weight: 500;
+}
+
+.exp-right {
+  color: #ccc;
 }
 
 .projects-grid, .skills-grid {
@@ -228,8 +283,21 @@ nav a {
   transition: transform 0.3s;
   font-size: 1.1rem;
 }
+
 .card:hover, .skill:hover {
   transform: translateY(-8px);
+}
+
+.card h3 {
+  color: #ffffff;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.card p {
+  color: #cccccc;
+  font-size: 1.3rem;
+  line-height: 1.8;
 }
 
 .skill i {
@@ -238,12 +306,34 @@ nav a {
   color: #00d8ff;
 }
 
-#contact a {
-  color: #0066cc;
-  font-weight: 500;
+.skill p {
+  color: #dddddd;
+  font-size: 1.3rem;
+  margin-top: 10px;
+  text-align: center;
 }
-#contact a:hover {
-  text-decoration: underline;
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  max-width: 600px;
+  margin: auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-family: inherit;
+}
+
+.contact-form button {
+  margin-top: 10px;
 }
 
 footer {
