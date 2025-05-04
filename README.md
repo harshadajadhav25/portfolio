@@ -8,7 +8,7 @@ Deployed on **GitHub Pages** for public access.
 ## 📁 Project Structure
 
 - `src/`: Contains all Vue components and static pages
-- `public/`: Assets like resume PDF
+- `public/`: Assets 
 - `dist/`: Auto-generated production build (do not edit manually)
 
 ---
