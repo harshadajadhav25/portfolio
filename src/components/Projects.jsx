@@ -16,9 +16,11 @@ const projects = [
     highlights: [
       "Built an automated data analysis workflow with data cleaning, missing-value handling, duplicate detection, and dynamic Plotly visualizations, reducing manual analysis and improving data exploration.",
     ],
-    github: "https://github.com/harshadajadhav25/ai-data-analyst-agent",
+    github:
+      "https://github.com/harshadajadhav25/ai-data-analyst-agent",
     demo: "https://ai-data-analyst-agent-csv.streamlit.app/",
   },
+
   {
     title: "Fraud Risk Analysis",
     technologies: [
@@ -34,8 +36,10 @@ const projects = [
     highlights: [
       "Designed Power BI reports with DAX measures to surface high-risk segments, flagging 1,400+ suspicious transactions for operational monitoring and alerting.",
     ],
-    github: "https://github.com/harshadajadhav25/Fraud-Risk-Analysis",
+    github:
+      "https://github.com/harshadajadhav25/Fraud-Risk-Analysis",
   },
+
   {
     title: "Crime Data Analysis & Visualization",
     technologies: [
@@ -51,7 +55,28 @@ const projects = [
     highlights: [
       "Built interactive Tableau dashboards with geospatial and time-series visualizations to identify crime hotspots and seasonal trends, enabling data-driven public safety analysis.",
     ],
-    github: "https://github.com/harshadajadhav25/crime-data-analysis",
+    github:
+      "https://github.com/harshadajadhav25/crime-data-analysis",
+  },
+
+  {
+    title: "Customer Churn Prediction & Analytics",
+    technologies: [
+      "Python",
+      "Pandas",
+      "Scikit-learn",
+      "Machine Learning",
+      "Streamlit",
+    ],
+    description:
+      "Developed an end-to-end churn analytics solution that identifies high-risk customers, monitors KPIs, estimates revenue risk, and provides retention recommendations.",
+    highlights: [
+      "Built an interactive dashboard to analyze churn trends, customer segments, and revenue risk while providing actionable business insights for retention strategies.",
+    ],
+    github:
+      "https://github.com/harshadajadhav25/customer-churn-project",
+    demo:
+      "https://customer-churn-ml-dashboard.streamlit.app/",
   },
 ];
 
@@ -118,7 +143,7 @@ function Projects() {
                   href={project.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 font-semibold text-slate-300 hover:text-blue-400"
+                  className="inline-flex items-center gap-2 font-semibold text-slate-300 transition hover:text-blue-400"
                 >
                   <FiGithub />
                   GitHub
@@ -129,7 +154,7 @@ function Projects() {
                     href={project.demo}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 font-semibold text-slate-300 hover:text-blue-400"
+                    className="inline-flex items-center gap-2 font-semibold text-slate-300 transition hover:text-blue-400"
                   >
                     <FiExternalLink />
                     Live Demo
