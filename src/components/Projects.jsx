@@ -2,7 +2,7 @@ import { FiExternalLink, FiGithub } from "react-icons/fi";
 
 const projects = [
   {
-    title: "InsightAI — AI-Powered Data Analyst Agent",
+    title: "InsightAI – AI-Powered Data Analyst Agent",
     technologies: [
       "Python",
       "Generative AI",
@@ -12,40 +12,46 @@ const projects = [
       "Plotly",
     ],
     description:
-      "Built an AI-powered analytics application that allows users to upload CSV datasets, ask questions in natural language, clean data, generate insights, and create visualizations.",
-    github:
-      "https://github.com/harshadajadhav25/ai-data-analyst-agent",
+      "Developed an AI-powered data analytics application using Python, Groq LLM API, and Streamlit, enabling users to upload CSV files, query data in natural language, and generate automated insights.",
+    highlights: [
+      "Built an automated data analysis workflow with data cleaning, missing-value handling, duplicate detection, and dynamic Plotly visualizations, reducing manual analysis and improving data exploration.",
+    ],
+    github: "https://github.com/harshadajadhav25/ai-data-analyst-agent",
     demo: "https://ai-data-analyst-agent-csv.streamlit.app/",
   },
   {
     title: "Fraud Risk Analysis",
-    technologies: ["Python", "SQL", "Power BI", "DAX", "Data Analysis"],
+    technologies: [
+      "Python",
+      "Pandas",
+      "NumPy",
+      "Power BI",
+      "Excel",
+      "EDA",
+    ],
     description:
-      "Analyzed more than 280,000 financial transactions to identify fraud patterns and high-risk segments, then created an interactive Power BI dashboard for monitoring and analysis.",
+      "Built an end-to-end Fraud Risk Analysis dashboard for 280K+ credit card transactions; performed cleaning, feature creation, and rate-based analysis to handle extreme class imbalance.",
+    highlights: [
+      "Designed Power BI reports with DAX measures to surface high-risk segments, flagging 1,400+ suspicious transactions for operational monitoring and alerting.",
+    ],
     github: "https://github.com/harshadajadhav25/Fraud-Risk-Analysis",
   },
   {
     title: "Crime Data Analysis & Visualization",
-    technologies: ["Python", "SQL", "Tableau", "Geospatial Analysis"],
-    description:
-      "Cleaned and analyzed more than one million LAPD crime records and developed Tableau dashboards to identify crime hotspots, seasonal patterns, and time-based trends.",
-    github:
-      "https://github.com/harshadajadhav25/crime-data-analysis",
-  },
-  {
-    title: "Customer Churn Prediction & Analytics",
     technologies: [
       "Python",
       "Pandas",
-      "Scikit-learn",
-      "Machine Learning",
-      "Streamlit",
+      "NumPy",
+      "SQL",
+      "Tableau",
+      "EDA",
     ],
     description:
-      "Developed an end-to-end churn analytics solution that identifies high-risk customers, monitors KPIs, estimates revenue risk, and provides retention recommendations.",
-    github:
-      "https://github.com/harshadajadhav25/customer-churn-project",
-    demo: "https://customer-churn-ml-dashboard.streamlit.app/",
+      "Cleaned, standardized, and analyzed 1M+ LAPD crime records using Python and SQL, improving data quality by 25% through data preprocessing and schema normalization.",
+    highlights: [
+      "Built interactive Tableau dashboards with geospatial and time-series visualizations to identify crime hotspots and seasonal trends, enabling data-driven public safety analysis.",
+    ],
+    github: "https://github.com/harshadajadhav25/crime-data-analysis",
   },
 ];
 
@@ -56,7 +62,6 @@ function Projects() {
       className="bg-slate-900 px-6 py-20 md:px-12 lg:px-16"
     >
       <div className="mx-auto max-w-7xl">
-        {/* Section Header */}
         <p className="mb-3 text-sm font-semibold uppercase tracking-[0.25em] text-blue-400">
           Projects
         </p>
@@ -70,7 +75,6 @@ function Projects() {
           AI-powered projects focused on solving real-world business problems.
         </p>
 
-        {/* Project Cards */}
         <div className="grid gap-6 md:grid-cols-2">
           {projects.map((project) => (
             <article
@@ -82,7 +86,7 @@ function Projects() {
                   {project.title}
                 </h3>
 
-                <span className="mt-1 h-2.5 w-2.5 shrink-0 rounded-full bg-blue-500 transition group-hover:shadow-[0_0_15px_rgba(59,130,246,0.8)]" />
+                <span className="mt-1 h-2.5 w-2.5 rounded-full bg-blue-500" />
               </div>
 
               <div className="mt-5 flex flex-wrap gap-2">
@@ -96,16 +100,25 @@ function Projects() {
                 ))}
               </div>
 
-              <p className="mt-6 flex-1 leading-7 text-slate-400">
+              <p className="mt-6 text-slate-400">
                 {project.description}
               </p>
 
-              <div className="mt-8 flex flex-wrap gap-4 border-t border-slate-800 pt-5">
+              <ul className="mt-4 space-y-2 text-slate-300">
+                {project.highlights.map((point) => (
+                  <li key={point} className="flex gap-2">
+                    <span className="mt-2 h-1.5 w-1.5 rounded-full bg-blue-400" />
+                    <span>{point}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <div className="mt-8 flex gap-4 border-t border-slate-800 pt-5">
                 <a
                   href={project.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 font-semibold text-slate-300 transition hover:text-blue-400"
+                  className="inline-flex items-center gap-2 font-semibold text-slate-300 hover:text-blue-400"
                 >
                   <FiGithub />
                   GitHub
@@ -116,7 +129,7 @@ function Projects() {
                     href={project.demo}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 font-semibold text-slate-300 transition hover:text-blue-400"
+                    className="inline-flex items-center gap-2 font-semibold text-slate-300 hover:text-blue-400"
                   >
                     <FiExternalLink />
                     Live Demo
