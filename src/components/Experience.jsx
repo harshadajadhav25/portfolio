@@ -1,6 +1,6 @@
 const experiences = [
   {
-    role: "Data Transformation Analyst",
+    role: "Data Analyst",
     company: "National Hispanic Health Research Institute (NHHRI)",
     location: "Hartford, CT (Remote)",
     period: "Feb 2026 – Jul 2026",
@@ -11,7 +11,7 @@ const experiences = [
     ],
   },
   {
-    role: "Data Scientist",
+    role: "Data Analyst",
     company: "Chicago Education Advocacy Cooperative (ChiEAC)",
     location: "Chicago, IL (Remote)",
     period: "Aug 2025 – Jul 2026",
@@ -22,7 +22,7 @@ const experiences = [
     ],
   },
   {
-    role: "Big Data and Cloud Developer",
+    role: "Big Data Developer",
     company: "Abzooba India Infotech Pvt. Ltd.",
     location: "Pune, India",
     period: "Jun 2021 – Jun 2023",
