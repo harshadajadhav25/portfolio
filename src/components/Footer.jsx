@@ -8,7 +8,7 @@ function Footer() {
           <p className="font-semibold text-white">Harshada Jadhav</p>
 
           <p className="mt-1 text-sm text-slate-500">
-            Data Analyst · © 2026 All rights reserved.
+            Data Engineer · © 2026 All rights reserved.
           </p>
         </div>
 
