@@ -4,8 +4,8 @@ const highlights = [
     label: "Years of Experience",
   },
   {
-    value: "4",
-    label: "Featured Projects",
+    value: "100+ GB",
+    label: "Daily Data Processed",
   },
   {
     value: "MS",
@@ -27,27 +27,33 @@ function About() {
             </p>
 
             <h2 className="max-w-3xl text-3xl font-bold leading-tight text-white sm:text-4xl">
-              Turning complex data into clear business insights
+              Building reliable pipelines and trusted datasets
             </h2>
 
             <div className="mt-8 max-w-3xl space-y-5 text-base leading-8 text-slate-300 sm:text-lg">
               <p>
-                I am a data professional with more than three years of
-                experience working with analytics, data engineering workflows,
-                healthcare data, and customer-focused datasets.
+                I’m a Data Engineer with over three years of experience
+                building ETL pipelines, improving data quality, and preparing
+                datasets for reporting and analytics using Python, SQL,
+                PySpark, and AWS.
               </p>
 
               <p>
-                I hold a Master of Science in Computer Science from California
-                State University, Los Angeles. My technical background includes
-                Python, SQL, PySpark, AWS, Power BI, Tableau, ETL workflows, and
-                data visualization.
+                At Abzooba, I developed production pipelines processing
+                100+ GB of daily healthcare data and reduced execution time
+                by 40% through Spark optimization and SQL query tuning.
+                My recent work includes integrating CDC and Census datasets
+                into Amazon Redshift, designing dimensional models for
+                Power BI, and building Bronze–Silver–Gold pipelines using
+                PySpark and Delta Lake.
               </p>
 
               <p>
-                I enjoy analyzing complex datasets, improving data quality,
-                identifying meaningful patterns, and presenting insights that
-                help organizations make informed decisions.
+                I hold a Master of Science in Computer Science from
+                California State University, Los Angeles. I also work
+                with Docker and GitHub Actions to automate pipeline
+                testing and validation, with a focus on making data
+                reliable and useful for the teams that depend on it.
               </p>
             </div>
           </div>

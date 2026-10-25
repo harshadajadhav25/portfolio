@@ -2,42 +2,40 @@ import { FiExternalLink, FiGithub } from "react-icons/fi";
 
 const projects = [
   {
-    title: "InsightAI – AI-Powered Data Analyst Agent",
-    technologies: [
-      "Python",
-      "Generative AI",
-      "Groq API",
-      "Pandas",
-      "Streamlit",
-      "Plotly",
-    ],
-    description:
-      "Developed an AI-powered data analytics application using Python, Groq LLM API, and Streamlit, enabling users to upload CSV files, query data in natural language, and generate automated insights.",
-    highlights: [
-      "Built an automated data analysis workflow with data cleaning, missing-value handling, duplicate detection, and dynamic Plotly visualizations, reducing manual analysis and improving data exploration.",
-    ],
-    github:
-      "https://github.com/harshadajadhav25/ai-data-analyst-agent",
-    demo: "https://ai-data-analyst-agent-csv.streamlit.app/",
-  },
+  title: "InsightAI – AI-Powered Data Analyst Agent",
+  technologies: [
+    "Python",
+    "Groq API",
+    "Pandas",
+    "Streamlit",
+    "Plotly",
+  ],
+  description:
+    "Built a conversational analytics application using Streamlit and the Groq API, enabling natural-language SQL and Pandas querying over uploaded datasets.",
+  highlights: [
+    "Automated exploratory data analysis with data sanitization, Plotly chart selection, and code validation for LLM-generated analysis.",
+  ],
+  github:
+    "https://github.com/harshadajadhav25/ai-data-analyst-agent",
+  demo: "https://ai-data-analyst-agent-csv.streamlit.app/",
+},
 
-  {
-    title: "Fraud Risk Analysis",
-    technologies: [
-      "Python",
-      "Pandas",
-      "NumPy",
-      "Power BI",
-      "Excel",
-      "EDA",
-    ],
-    description:
-      "Built an end-to-end Fraud Risk Analysis dashboard for 280K+ credit card transactions; performed cleaning, feature creation, and rate-based analysis to handle extreme class imbalance.",
-    highlights: [
-      "Designed Power BI reports with DAX measures to surface high-risk segments, flagging 1,400+ suspicious transactions for operational monitoring and alerting.",
-    ],
-    github:
-      "https://github.com/harshadajadhav25/Fraud-Risk-Analysis",
+{
+  title: "Fraud Risk Analysis",
+  technologies: [
+    "Python",
+    "SQL",
+    "Batch Data Processing",
+    "Data Validation",
+    "Feature Engineering",
+  ],
+  description:
+    "Developed a batch data pipeline to process 280,000+ financial transaction records, applying feature normalization and aggregation to prepare inputs for fraud risk models.",
+  highlights: [
+    "Implemented data validation rules for a transaction dataset with a fraud rate below 0.2%, preparing consistent datasets for downstream analysis.",
+  ],
+  github:
+    "https://github.com/harshadajadhav25/Fraud-Risk-Analysis",
   },
 
   {

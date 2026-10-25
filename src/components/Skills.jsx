@@ -2,13 +2,13 @@ import {
   FaAws,
   FaChartBar,
   FaDatabase,
+  FaDocker,
   FaGitAlt,
   FaPython,
 } from "react-icons/fa";
 
 import {
   SiApachespark,
-  SiJupyter,
   SiMysql,
   SiPandas,
   SiPostgresql,
@@ -18,43 +18,80 @@ const skillGroups = [
   {
     title: "Programming & Analytics",
     icon: FaPython,
-    skills: ["Python", "SQL", "Pandas", "NumPy", "EDA", "KPI Analysis"],
+    skills: [
+      "Python",
+      "SQL",
+      "Bash",
+      "Pandas",
+      "NumPy",
+      "EDA",
+      "KPI Analysis",
+    ],
   },
   {
     title: "Data Engineering",
     icon: SiApachespark,
     skills: [
-      "PySpark",
       "Apache Spark",
+      "PySpark",
+      "Delta Lake",
+      "dbt",
       "ETL/ELT",
       "Batch Processing",
-      "Data Transformation",
-      "Data Validation",
+      "Medallion Architecture",
+      "Data Quality Validation",
     ],
   },
   {
-    title: "Visualization",
-    icon: FaChartBar,
-    skills: ["Power BI", "Tableau", "Excel", "Dashboard Development"],
-  },
-  {
-    title: "Cloud",
+    title: "Cloud & Data Platforms",
     icon: FaAws,
-    skills: ["AWS S3", "AWS Glue", "AWS RDS", "Google BigQuery"],
+    skills: [
+      "Amazon S3",
+      "AWS Glue",
+      "Amazon Athena",
+      "Amazon Redshift",
+      "Amazon RDS",
+      "AWS Lambda",
+      "Databricks",
+      "Google BigQuery",
+    ],
   },
   {
-    title: "Databases",
+    title: "Databases & Modeling",
     icon: FaDatabase,
-    skills: ["PostgreSQL", "MySQL", "SQL", "Data Modeling"],
+    skills: [
+      "PostgreSQL",
+      "MySQL",
+      "Data Warehousing",
+      "Data Modeling",
+      "Dimensional Modeling",
+      "Star Schema",
+      "Schema Design",
+    ],
   },
   {
-    title: "AI & Tools",
+    title: "Visualization & AI",
+    icon: FaChartBar,
+    skills: [
+      "Power BI",
+      "Tableau",
+      "Excel",
+      "Dashboard Development",
+      "Streamlit",
+      "Plotly",
+      "LLM Integration",
+      "Groq API",
+    ],
+  },
+  {
+    title: "Development & DevOps",
     icon: FaGitAlt,
     skills: [
-      "Generative AI",
-      "Groq API",
-      "Prompt Engineering",
       "Git",
+      "Docker",
+      "GitHub Actions",
+      "CI/CD",
+      "Unit Testing",
       "Jupyter Notebook",
     ],
   },
@@ -66,10 +103,10 @@ const featuredTools = [
   { name: "Power BI", icon: FaChartBar },
   { name: "Tableau", icon: FaChartBar },
   { name: "AWS", icon: FaAws },
-  { name: "Spark", icon: SiApachespark },
+  { name: "Apache Spark", icon: SiApachespark },
   { name: "PostgreSQL", icon: SiPostgresql },
   { name: "MySQL", icon: SiMysql },
-  { name: "Jupyter", icon: SiJupyter },
+  { name: "Docker", icon: FaDocker },
 ];
 
 function Skills() {
@@ -88,8 +125,9 @@ function Skills() {
         </h2>
 
         <p className="mb-12 max-w-2xl leading-7 text-slate-400">
-          Technologies and tools I use to analyze data, build reliable
-          pipelines, create dashboards, and support data-driven decisions.
+          Technologies I use to build reliable data pipelines, model
+          analytics-ready datasets, automate validation, and create
+          reporting applications.
         </p>
 
         <div className="mb-12 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-3">
@@ -101,9 +139,12 @@ function Skills() {
                 key={tool.name}
                 className="flex flex-col items-center justify-center rounded-2xl border border-slate-800 bg-slate-900 p-5 transition duration-300 hover:-translate-y-1 hover:border-blue-500"
               >
-                <Icon className="text-4xl text-blue-400" />
+                <Icon
+                  aria-hidden="true"
+                  className="text-4xl text-blue-400"
+                />
 
-                <p className="mt-3 text-sm font-medium text-slate-300">
+                <p className="mt-3 text-center text-sm font-medium text-slate-300">
                   {tool.name}
                 </p>
               </div>
@@ -121,7 +162,10 @@ function Skills() {
                 className="rounded-2xl border border-slate-800 bg-slate-900 p-6 transition duration-300 hover:border-blue-500"
               >
                 <div className="flex items-center gap-3">
-                  <Icon className="text-2xl text-blue-400" />
+                  <Icon
+                    aria-hidden="true"
+                    className="shrink-0 text-2xl text-blue-400"
+                  />
 
                   <h3 className="text-xl font-semibold text-white">
                     {group.title}

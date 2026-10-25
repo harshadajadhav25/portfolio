@@ -1,24 +1,34 @@
 const experiences = [
   {
-    role: "Data Analyst",
+    role: "Data Engineer",
     company: "National Hispanic Health Research Institute (NHHRI)",
     location: "Hartford, CT (Remote)",
     period: "Feb 2026 – Jul 2026",
     points: [
-      "Collected, cleaned, and integrated healthcare datasets from U.S. Census, CDC, and federal sources across 51 states using Python, SQL, and Excel, improving data quality by ~30%.",
-      "Processed and standardized 200K+ healthcare records on chronic conditions and demographic indicators, reducing manual data preparation by 35% and improving reporting accuracy.",
-      "Built interactive Tableau dashboards to visualize healthcare and demographic trends across 6 years of data, enabling state-level analysis and accelerating stakeholder decision-making by 45%.",
+      "Integrated CDC, U.S. Census, and federal public health datasets into Amazon Redshift, improving data quality by 30% through automated schema validation, deduplication, and standardized date and location formats.",
+      "Automated cleaning and standardization of 200,000+ public health records using Python and SQL, reducing manual data preparation time by 35% through consistent column types, missing-value handling, and unified join keys.",
+      "Designed pre-aggregated star-schema fact and dimension tables spanning 6 years of public health data in Amazon Redshift, powering Power BI dashboards and reducing executive reporting turnaround time by 45%.",
     ],
   },
   {
-    role: "Data Analyst",
+    role: "Data Engineer",
     company: "Chicago Education Advocacy Cooperative (ChiEAC)",
     location: "Chicago, IL (Remote)",
-    period: "Aug 2025 – Jul 2026",
+    period: "Aug 2025 – Jan 2026",
     points: [
-      "Analyzed customer churn behavior using Python-based KPI calculations, identifying a 19.7% churn rate and pinpointing bronze and silver tiers as highest-risk customer segments.",
-      "Quantified $310K in revenue at risk by segmenting high-risk customers using service risk and customer value metrics, enabling targeted retention strategy recommendations.",
-      "Developed KPI dashboards that translated customer behavior data into actionable retention insights for business stakeholders.",
+      "Engineered Bronze–Silver–Gold medallion architecture using PySpark, SQL, and Delta Lake to transform 9,000 customer records into validated, analytics-ready datasets through automated ETL pipelines and data quality checks.",
+      "Built Gold-layer analytical data marts for churn segmentation, customer value, and retention analysis across 4 membership tiers, calculating a 19.73% churn rate and customer retention KPIs.",
+      "Containerized data processing workflows using Docker and implemented GitHub Actions CI/CD to automate pipeline testing and validation.",
+    ],
+  },
+  {
+    role: "Data Developer",
+    company: "California State University, Los Angeles",
+    location: "Los Angeles, CA",
+    period: "Aug 2025 – Jan 2026",
+    points: [
+      "Assisted with cleaning, validating, and organizing departmental data using SQL, Python, and Excel for reporting needs.",
+      "Supported simple ETL workflows by extracting data from multiple files/sources, applying transformations, and preparing structured datasets for departmental reporting."
     ],
   },
   {
@@ -27,10 +37,9 @@ const experiences = [
     location: "Pune, India",
     period: "Jun 2021 – Jun 2023",
     points: [
-      "Designed and maintained ETL/ELT pipelines processing 100+ GB of nested healthcare JSON data daily, transforming raw data into structured datasets using Python, SQL, and PySpark.",
-      "Improved data accuracy by 25% through root-cause analysis and validation of data transformation logic, ensuring reliable data for analytics.",
-      "Reduced pipeline processing time by up to 40% by optimizing Apache Spark jobs, minimizing data shuffling, and improving distributed data transformations.",
-      "Translated complex stakeholder requirements into PySpark data transformation logic; collaborated with QA and API teams to validate data quality against business specifications.",
+      "Designed and scaled production ETL pipelines using AWS Glue, PySpark, Amazon S3, Athena, and SQL to transform 100+ GB of daily semi-structured JSON healthcare data into analytical tables.",
+      "Reduced pipeline execution time by 40% through Spark job optimization, SQL query tuning, and distributed processing improvements.",
+      "Increased data accuracy by 25% through automated validation, root-cause analysis, and transformation logic fixes, collaborating with engineering and business teams to define data requirements."
     ],
   },
 ];
